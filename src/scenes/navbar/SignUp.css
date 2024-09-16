@@ -1,0 +1,112 @@
+@font-face {
+  font-family: poppinsregular;
+  src: url(../../assets/Poppins-Regular.ttf);
+}
+.poppins {
+  font-family: poppinsregular;
+}
+
+@font-face {
+  font-family: poppinslight;
+  src: url(../../assets/Poppins-Light.ttf);
+}
+.poppins2 {
+  font-family: poppinslight;
+}
+@font-face {
+  font-family: poppinsmedium;
+  src: url(../../assets/Poppins-Medium.ttf);
+}
+.poppins3 {
+  font-family: poppinsmedium;
+}
+.main {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.righthalf {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+
+  right: 0;
+  background-color: #fff;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.lefthalf {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+
+  left: 0;
+  background-image: url("../../assets/signupbackground4.png");
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+.signup {
+  width: 486px;
+  height: 770px;
+
+  text-align: center;
+  margin-top: 100px;
+}
+.signup-title {
+  font-size: 30px;
+  text-align: left;
+}
+.login-insignup1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.acc1 {
+  color: #333;
+  margin-top: 5px;
+  font-size: 15px;
+  display: inline-block;
+}
+.login-link {
+  text-decoration: underline;
+  margin-left: 5px; /* Adjust spacing between text and link */
+}
+.login-link:hover {
+  text-decoration: underline;
+}
+.inside2 {
+  margin-top: 35px;
+}
+.signup-form {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.form-group2 {
+  margin-bottom: 30px;
+  text-align: left;
+}
+.signuptext {
+  color: #666666;
+  font-size: 15px;
+}
+.signup-button {
+  width: 270px;
+  height: 64px;
+  padding: 10px;
+
+  color: white;
+  border: none;
+  border-radius: 32px;
+  font-size: 17px;
+  cursor: pointer;
+}

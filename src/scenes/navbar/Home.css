@@ -1,0 +1,272 @@
+body {
+  font-family: dmSans;
+}
+@font-face {
+  font-family: poppinsregular;
+  src: url(../../assets/Poppins-Regular.ttf);
+}
+.poppins {
+  font-family: poppinsregular;
+}
+.slogan {
+  max-width: 750px;
+  height: 120px;
+  margin-left: 50px;
+  position: relative;
+  top: 150px;
+}
+.text1 {
+  margin-left: 140px;
+  background-color: wheat;
+  margin-bottom: 50px;
+}
+.background {
+  background-image: url("../../assets/hero_banner_top.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  height: calc(100vh);
+
+  background-repeat: no-repeat;
+}
+
+.search {
+  background-color: white;
+  width: 900px;
+  z-index: 1;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 50px;
+  box-sizing: border-box;
+  display: block;
+  unicode-bidi: isolate;
+  border-radius: 2px;
+}
+
+.full {
+  position: relative;
+  min-height: calc(-235px + 100vh);
+  background-color: #fff;
+}
+.tab_title {
+  list-style-position: initial;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.searchbar {
+  width: 700px;
+}
+.kind {
+  color: #273896;
+  border-color: #273896;
+}
+.kind2 {
+  color: #6e787c;
+}
+.button1 {
+  background-color: #273896;
+}
+.hashtag {
+  color: #273896;
+}
+.choose {
+  width: 936;
+  height: 555;
+}
+.carousel-wrapper {
+  width: 1200px;
+  margin: auto;
+}
+
+.carousel {
+  width: 100%;
+  height: 611px;
+  background-color: #6e787c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choosing {
+  width: 1100px;
+  max-width: 1200px;
+  height: 555px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px; /* Adjust the gap between the columns */
+}
+
+.p-2 {
+  padding: 8px; /* Adjust padding as needed */
+}
+
+.title {
+  font-size: 45px;
+  position: relative;
+  margin-left: 190px;
+  margin-top: 70px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  min-height: 544px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 65px;
+  border-radius: 8px;
+  width: 1256px;
+  height: 554.5px;
+  margin: auto;
+}
+
+.box {
+  width: 800px;
+  height: 424.5px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  background-color: #181a1b66;
+  padding: 30px;
+}
+.me {
+  width: 400px;
+  height: 80px;
+}
+.bullet {
+  width: 650px;
+  height: 270px;
+}
+.list {
+  margin-left: 30px;
+  margin-top: 20px;
+
+  font-size: 25px;
+}
+.me1 {
+  display: flex;
+  align-items: center;
+}
+.aboutme {
+  font-size: 35px;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+.space {
+  margin-top: 10px;
+}
+.profession {
+  height: 100%;
+  width: 100%;
+  background-color: #f4f5f5;
+}
+.choosing1 {
+  width: 1400px;
+  max-width: 1200px;
+  height: 700px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  padding: 0;
+}
+.pro-item {
+  position: relative;
+  margin-top: 18px;
+  margin-left: 19px;
+
+  width: 200px;
+  height: 300px;
+}
+.arrow {
+  width: 34px;
+  height: 34px;
+}
+.job {
+  font-size: 15px;
+}
+.jobname {
+  width: 201px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+.footercontent {
+  margin: 0px auto;
+  height: 175px;
+  width: 1256px;
+  padding: 16px 0px;
+  align-items: center;
+  position: relative;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  width: 1675px;
+  height: 175px;
+  position: relative;
+}
+.left {
+  width: 800px;
+  height: 115px;
+
+  flex-wrap: wrap;
+}
+.terms {
+  margin-top: 2px;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 3px;
+}
+.policy {
+  color: #fff;
+}
+.theme {
+  background-color: #273896;
+}
+.right {
+  width: 454px;
+  height: 75px;
+
+  margin-top: 20px;
+}
+.email {
+  text-align: right;
+  font-size: 14.5px;
+  margin-right: 23px;
+}
