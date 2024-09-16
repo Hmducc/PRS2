@@ -7,6 +7,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import CoHome from "./scenes/Corporations/Co-Home";
+import CoIntro from "./scenes/Corporations/Co-Intro";
+import CoLogin from "./scenes/Corporations/Co-Login";
+import CoSignUp from "./scenes/Corporations/Co-SignUp";
 import Company from "./scenes/navbar/Company";
 import Home from "./scenes/navbar/Home";
 import Login from "./scenes/navbar/Login";
@@ -29,7 +32,10 @@ const MainContent: React.FC = () => {
   const hideNavAndFooter =
     location.pathname === "/login" ||
     location.pathname === "/signup" ||
-    location.pathname === "/cohome";
+    location.pathname === "/cologin" ||
+    location.pathname === "/cosignup" ||
+    location.pathname === "/cohome" ||
+    location.pathname === "/cointro";
 
   return (
     <div>
@@ -39,8 +45,11 @@ const MainContent: React.FC = () => {
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/company" element={<Company />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/cosignup" element={<CoSignUp />} />
+        <Route path="/cologin" element={<CoLogin />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<Home />} /> {/* Default route */}
+        <Route path="/cointro" element={<CoIntro />} />
         <Route path="/cohome" element={<CoHome />} />
       </Routes>
     </div>

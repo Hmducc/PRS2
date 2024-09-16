@@ -32,9 +32,8 @@
   width: 120px;
   height: 35px;
   justify-content: center;
-  border-width: 1px;
+
   border-radius: 5px;
-  border-color: black;
 }
 .co-nav-login1 {
   position: absolute;
@@ -45,9 +44,10 @@
   width: 120px;
   height: 35px;
   justify-content: center;
-  border-width: 1px;
+
   border-radius: 5px;
-  border-color: black;
+
+  background-color: #d8d8d8;
 }
 .co-content {
   display: flex;
