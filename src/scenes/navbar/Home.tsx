@@ -312,7 +312,7 @@ const Home: React.FC = () => {
                 #Hanoi
               </span>
               <span className="inline-block bg-blue-100 hashtag px-3 py-1 rounded-full mr-2">
-                #HighIncome
+                #HighIncomemmmmm12123123HH
               </span>
             </div>
           </div>

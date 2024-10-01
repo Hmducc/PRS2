@@ -19,6 +19,7 @@ const Navigation: React.FC = () => {
         className="flex items-center justify-between p-1 lg:px-8   "
         aria-label="Global"
       >
+        
         <div className="flex lg:flex-1 PHANLOGOUSTH">
           <a href="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
