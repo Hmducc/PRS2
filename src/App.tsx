@@ -13,10 +13,10 @@ import CoSignUp from "./scenes/Corporations/Co-SignUp";
 import Company from "./scenes/navbar/Company";
 import Home from "./scenes/navbar/Home";
 import Login from "./scenes/navbar/Login";
-import Marketplace from "./scenes/navbar/Markerplace";
 import Navigation from "./scenes/navbar/Navigation";
 import SignUp from "./scenes/navbar/SignUp";
 import ScrollToTop from "./ScrollToTop";
+import RecruitmentNews from "./scenes/navbar/RecruitmentNews";
 
 const App: React.FC = () => {
   return (
@@ -42,7 +42,7 @@ const MainContent: React.FC = () => {
       {!hideNavAndFooter && <Navigation />}
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/recruitmentnews" element={<RecruitmentNews />} />
         <Route path="/company" element={<Company />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cosignup" element={<CoSignUp />} />

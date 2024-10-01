@@ -3,15 +3,21 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
 import logo from "../../assets/usthlogo.png";
 import "./Navigation.css";
+import { useNavigate } from "react-router-dom";
 const navigation = [
   { name: "Home", href: "/home" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "/marketplace" },
-  { name: "Company", href: "/company" },
+  { name: "Recruitment News", href: "/recruitmentnews" },
 ];
 
 const Navigation: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("login");
+  };
+  const handleCorporation = () => {
+    navigate("/cointro");
+  };
 
   return (
     <header className=" inset-x-0 top-0 z-50 fixed bg-white   ">
@@ -19,7 +25,6 @@ const Navigation: React.FC = () => {
         className="flex items-center justify-between p-1 lg:px-8   "
         aria-label="Global"
       >
-        
         <div className="flex lg:flex-1 PHANLOGOUSTH">
           <a href="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -48,9 +53,18 @@ const Navigation: React.FC = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end LOGINNAMODAY">
-          <a href="/login" className="text-base poppins3 leading-6 text-main">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          <button
+            className="nav-login1 bg-white mr-5 text-main poppinsregular"
+            onClick={handleCorporation}
+          >
+            For Corporations
+          </button>
+          <button
+            className="nav-login bg-main text-white poppinsregular"
+            onClick={handleLogin}
+          >
+            Login
+          </button>
         </div>
       </nav>
       <Dialog

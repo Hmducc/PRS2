@@ -20,3 +20,26 @@
 .poppins3 {
   font-family: poppinsmedium;
 }
+.nav-login {
+  right: 200px;
+  align-items: center;
+
+  display: flex;
+  width: 120px;
+  height: 35px;
+  justify-content: center;
+
+  border-radius: 5px;
+}
+.nav-login1 {
+  right: 200px;
+  align-items: center;
+  border: 1px solid;
+  border-color: blue;
+  display: flex;
+  width: 120px;
+  height: 35px;
+  justify-content: center;
+
+  border-radius: 5px;
+}

@@ -12,7 +12,7 @@ import "../navbar/styles.css";
 
 // import required modules
 
-const Marketplace: React.FC = () => {
+const RecruitmentNews: React.FC = () => {
   return (
     <div>
       <Swiper
@@ -41,4 +41,4 @@ const Marketplace: React.FC = () => {
   );
 };
 
-export default Marketplace;
+export default RecruitmentNews;
