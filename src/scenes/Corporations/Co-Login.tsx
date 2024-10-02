@@ -10,7 +10,7 @@ const onChange: CheckboxProps["onChange"] = (e) => {
 const CoLogin: React.FC = () => {
   const navigate = useNavigate();
   const goHome = () => {
-    navigate("/cohome");
+    navigate("/cocompany");
   };
   return (
     <div className="co-main">

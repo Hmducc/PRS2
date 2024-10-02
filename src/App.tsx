@@ -17,6 +17,7 @@ import Navigation from "./scenes/navbar/Navigation";
 import SignUp from "./scenes/navbar/SignUp";
 import ScrollToTop from "./ScrollToTop";
 import RecruitmentNews from "./scenes/navbar/RecruitmentNews";
+import CoCompany from "./scenes/Corporations/Co-Company";
 
 const App: React.FC = () => {
   return (
@@ -35,6 +36,7 @@ const MainContent: React.FC = () => {
     location.pathname === "/cologin" ||
     location.pathname === "/cosignup" ||
     location.pathname === "/cohome" ||
+    location.pathname === "/cocompany" ||
     location.pathname === "/cointro";
 
   return (
@@ -46,6 +48,7 @@ const MainContent: React.FC = () => {
         <Route path="/company" element={<Company />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cosignup" element={<CoSignUp />} />
+        <Route path="/cocompany" element={<CoCompany />} />
         <Route path="/cologin" element={<CoLogin />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<Home />} /> {/* Default route */}
