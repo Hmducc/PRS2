@@ -23,11 +23,6 @@
 .co-home-bar {
   background-color: aqua;
 }
-.co-news-container {
-  display: grid;
-  grid-template-columns: 4fr 3fr 3fr 3fr 3fr 3fr; /* Creates 4 equal columns */
-  gap: 2px; /* Optional: Adds space between columns */
-}
 
 .co-news-column {
   padding: 10px;
@@ -38,4 +33,9 @@
   height: 36px;
   text-align: center;
   border-radius: 10px;
+}
+.co-candidates-container {
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr 3fr; /* Creates 4 equal columns */
+  gap: 2px; /* Optional: Adds space between columns */
 }

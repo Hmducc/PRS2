@@ -1,0 +1,5 @@
+.co-requirement-container {
+  display: grid;
+  grid-template-columns: 4fr 4fr 3fr 3fr 3fr 3fr; /* Creates 4 equal columns */
+  gap: 2px; /* Optional: Adds space between columns */
+}
