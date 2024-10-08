@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal, Input } from "antd"; // Ant Design for Modal and Input
 import { useNavigate } from "react-router-dom";
-
+import logo from "../../assets/usthlogo.png";
 interface Company {
   name: string;
   people: number;
@@ -46,7 +46,14 @@ const CoCompany: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="">
+      <div className="bg-blue-100 co-nav">
+        <div className="flex items-center justify-center">
+          <div>
+            <img className="h-16 w-100 ml-5 " src={logo} />
+          </div>
+        </div>
+      </div>
       {/* Button to open the modal */}
       <button
         className="bg-blue-500 text-white px-4 py-2 rounded-lg m-4"
@@ -95,11 +102,12 @@ const CoCompany: React.FC = () => {
       </Modal>
 
       {/* Rendering the list of company cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <div className=" bg-blue-100  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         {companies.map((company, index) => (
           <div
             key={index}
-            className="bg-white p-4 shadow-md rounded-lg w-80 m-4 cursor-pointer"
+            className="bg-slate-50 p-4 shadow-md rounded-lg w-80 m-4 cursor-pointer"
             onClick={handleClick}
           >
             <div className="flex items-center justify-between mb-4">
@@ -108,8 +116,9 @@ const CoCompany: React.FC = () => {
                   {company.name.charAt(0)}
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold">{company.name}</h2>
-                  <p className="text-gray-500 text-sm">Dưới {company.people}</p>
+                  <h2 className="text-xl text-main font-bold">
+                    {company.name}
+                  </h2>
                 </div>
               </div>
               <div className="text-gray-400 cursor-pointer">...</div>
