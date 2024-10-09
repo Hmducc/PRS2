@@ -49,8 +49,11 @@ const CoCompany: React.FC = () => {
     <div className="">
       <div className="bg-blue-100 co-nav">
         <div className="flex items-center justify-center">
-          <div>
-            <img className="h-16 w-100 ml-5 " src={logo} />
+          <div className="">
+            <a href="/home" className="">
+              <span className="sr-only">Your Company</span>
+              <img className="h-16 w-auto" src={logo} alt="" />
+            </a>
           </div>
         </div>
       </div>

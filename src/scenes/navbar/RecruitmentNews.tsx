@@ -2,7 +2,6 @@ import React from "react";
 // Import Swiper React components
 
 // Import Swiper styles
-import "./UserInfo.css";
 
 // import required modules
 

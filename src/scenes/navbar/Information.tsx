@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // Import Swiper React components
 
 // Import Swiper styles
-import "./UserInfo.css";
+import "./Information.css";
 
 // import required modules
 
