@@ -578,22 +578,8 @@ const Home: React.FC = () => {
           <div className=" flex-wrap flex items-center pt-6 footercontent">
             <div className="left">
               <img src={usth} width={100} height={20}></img>
-              <div className="terms">
-                <a
-                  href="https://iviec.vn/privacy-policy"
-                  className="text-white mt-1  "
-                >
-                  Terms and Conditions
-                </a>
-                <div className="dot ml-2 mr-2"></div>
-                <a
-                  href="https://iviec.vn/privacy-policy"
-                  className="text-white mt-1 policy   "
-                >
-                  Privacy Policies
-                </a>
-              </div>
-              <span className="text-white">
+
+              <span className="text-white mt-12">
                 © Copyright 2021 - 2024 | IVIEC.IO | FPT CORPORATION | USTH
               </span>
             </div>

@@ -54,7 +54,7 @@ const Navigation: React.FC = () => {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end LOGINNAMODAY">
           <button
-            className="nav-login1 bg-white mr-5 text-main poppinsregular"
+            className="nav-login1 bg-white mr-5 text-sm text-main poppinsregular"
             onClick={handleCorporation}
           >
             For Corporations
