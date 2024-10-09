@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 const navigation = [
   { name: "Home", href: "/home" },
   { name: "Recruitment News", href: "/recruitmentnews" },
+  { name: "Information", href: "/information" },
 ];
 
 const Navigation: React.FC = () => {
