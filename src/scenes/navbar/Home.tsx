@@ -24,75 +24,31 @@ import JobCard from "./JobCard";
 
 const jobData = [
   {
+    id: 1,
     title: "Frontend Developer",
     company: "FPT Corporation",
     salary: "15.000.000 VND",
     imageUrl: fptlogo,
   },
   {
+    id: 2,
     title: "Frontend Developer",
     company: "FPT Corporation",
     salary: "25.000.000 VND",
     imageUrl: fptlogo,
   },
   {
+    id: 3,
     title: "Frontend Developer",
     company: "FPT Corporation",
-    salary: "Negotiable",
+    salary: "25.000.000 VND",
     imageUrl: fptlogo,
   },
   {
+    id: 4,
     title: "Frontend Developer",
     company: "FPT Corporation",
-    salary: "Negotiable",
-    imageUrl: fptlogo,
-  },
-  {
-    title: "Frontend Developer",
-    company: "FPT Corporation",
-    salary: "Negotiable",
-    imageUrl: fptlogo,
-  },
-  {
-    title: "Frontend Developer",
-    company: "FPT Corporation",
-    salary: "Negotiable",
-    imageUrl: fptlogo,
-  },
-  {
-    title: "Frontend Developer",
-    company: "FPT Corporation",
-    salary: "Negotiable",
-    imageUrl: fptlogo,
-  },
-  {
-    title: "Frontend Developer",
-    company: "FPT Corporation",
-    salary: "Negotiable",
-    imageUrl: fptlogo,
-  },
-  {
-    title: "Frontend Developer",
-    company: "FPT Corporation",
-    salary: "Negotiable",
-    imageUrl: fptlogo,
-  },
-  {
-    title: "Frontend Developer",
-    company: "FPT Corporation",
-    salary: "Negotiable",
-    imageUrl: fptlogo,
-  },
-  {
-    title: "Frontend Developer",
-    company: "FPT Corporation",
-    salary: "Negotiable",
-    imageUrl: fptlogo,
-  },
-  {
-    title: "Frontend Developer",
-    company: "FPT Corporation",
-    salary: "Negotiable",
+    salary: "25.000.000 VND",
     imageUrl: fptlogo,
   },
 ];
@@ -318,33 +274,32 @@ const Home: React.FC = () => {
           </div>
         </div>
       </article>
-      <div>
-        <h1 className="title text-main">Popular Jobs</h1>
-        <div className="choosing flex justify-center items-center">
-          <Swiper
-            slidesPerView={2}
-            grid={{
-              rows: 2,
-            }}
-            spaceBetween={1}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Grid, Pagination]}
-            className="mySwiper"
-          >
-            {jobData.map((job, index) => (
-              <SwiperSlide key={index}>
-                <JobCard
-                  title={job.title}
-                  company={job.company}
-                  salary={job.salary}
-                  imageUrl={job.imageUrl}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+      <h1 className="title text-main">Popular Jobs</h1>
+      <div className="choosing flex justify-center items-center">
+        <Swiper
+          slidesPerView={2}
+          grid={{
+            rows: 2,
+          }}
+          spaceBetween={1}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Grid, Pagination]}
+          className="mySwiper"
+        >
+          {jobData.map((job, index) => (
+            <SwiperSlide key={index}>
+              <JobCard
+                id={job.id}
+                title={job.title}
+                company={job.company}
+                salary={job.salary}
+                imageUrl={job.imageUrl}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <section className="box-content">
         <div>

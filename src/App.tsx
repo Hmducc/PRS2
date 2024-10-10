@@ -17,6 +17,7 @@ import Navigation from "./scenes/navbar/Navigation";
 import SignUp from "./scenes/navbar/SignUp";
 import ScrollToTop from "./ScrollToTop";
 import RecruitmentNews from "./scenes/navbar/RecruitmentNews";
+import JobDetails from "./scenes/navbar/JobDetails";
 import Information from "./scenes/navbar/Information";
 import CoCompany from "./scenes/Corporations/Co-Company";
 
@@ -51,6 +52,7 @@ const MainContent: React.FC = () => {
         <Route path="/cosignup" element={<CoSignUp />} />
         <Route path="/cocompany" element={<CoCompany />} />
         <Route path="/cologin" element={<CoLogin />} />
+        <Route path="/job/:id" element={<JobDetails />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/information" element={<Information />} />
         <Route path="*" element={<Home />} /> {/* Default route */}
