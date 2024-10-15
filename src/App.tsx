@@ -20,6 +20,7 @@ import RecruitmentNews from "./scenes/navbar/RecruitmentNews";
 import JobDetails from "./scenes/navbar/JobDetails";
 import Information from "./scenes/navbar/Information";
 import CoCompany from "./scenes/Corporations/Co-Company";
+import Admin from "./scenes/Corporations/Admin";
 
 const App: React.FC = () => {
   return (
@@ -39,7 +40,8 @@ const MainContent: React.FC = () => {
     location.pathname === "/cosignup" ||
     location.pathname === "/cohome" ||
     location.pathname === "/cocompany" ||
-    location.pathname === "/cointro";
+    location.pathname === "/cointro" ||
+    location.pathname === "/admin";
 
   return (
     <div>
@@ -52,6 +54,7 @@ const MainContent: React.FC = () => {
         <Route path="/cosignup" element={<CoSignUp />} />
         <Route path="/cocompany" element={<CoCompany />} />
         <Route path="/cologin" element={<CoLogin />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/job/:id" element={<JobDetails />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/information" element={<Information />} />
