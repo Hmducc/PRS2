@@ -36,21 +36,35 @@ const CoIntro: React.FC = () => {
                 <p>SignUp</p>
               </button>
             </div>
-            <div className=" h-500 co-content">
-              <div className="text-4xl  w-700 mt-25">
-                <p className="text-white">
-                  Find the{" "}
-                  <span className="poppins3 text-main"> MOST SUITABLE </span>
-                  candicates for your corporation!
-                </p>
+            <div className="relative h-500 flex">
+              {/* Left part (5/12) for the content */}
+              <div className="w-5/12 flex items-start justify-center co-intro-blur h-850 pt-20">
+                <div className="text-4xl mt-25 w-full px-8">
+                  <p className="text-white">
+                    Find the{" "}
+                    <span className="poppins3 text-main"> MOST SUITABLE </span>
+                    candidates for your corporation!
+                  </p>
+                  <div className="bullet2">
+                    <ul className="list list-disc text-white">
+                      <li>Post job listings for free, simply, and quickly.</li>
+                      <li className="space">
+                        A massive pool of candidates from various industries and
+                        fields.
+                      </li>
+                    </ul>
+                  </div>
+                  <button
+                    className="co-startnow bg-main text-white text-xl mt-5"
+                    onClick={handleLogin}
+                  >
+                    Start Now
+                  </button>
+                </div>
               </div>
 
-              <button
-                className=" co-startnow bg-main text-white text-xl mt-5"
-                onClick={handleLogin}
-              >
-                Start Now
-              </button>
+              {/* Right part (7/12) for the image */}
+              <div className="w-7/12"></div>
             </div>
           </div>
         </div>

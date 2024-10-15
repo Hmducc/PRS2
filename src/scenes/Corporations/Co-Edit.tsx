@@ -1,130 +1,122 @@
 import React, { useState } from "react";
-import { Input, Button } from "antd"; // Ant Design for Input and Button
-import { UploadOutlined } from "@ant-design/icons";
-
-interface UserInfo {
-  name: string;
-  email: string;
-  bio: string;
-  profilePicture: string | null;
-}
 
 const EditInformationScreen: React.FC = () => {
-  const [userInfo, setUserInfo] = useState<UserInfo>({
-    name: "",
-    email: "",
-    bio: "",
-    profilePicture: null, // Store the image URL or base64 string
-  });
+  const [name, setName] = useState("John Doe");
+  const [username, setUsername] = useState("johndoe");
+  const [showPasswordChange, setShowPasswordChange] = useState(false);
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
 
-  const [selectedImage, setSelectedImage] = useState<File | null>(null); // Store the selected image file
-  const [previewImage, setPreviewImage] = useState<string | null>(null); // Store image preview
-
-  // Handle input field changes (for name, email, bio)
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setUserInfo((prevState) => ({ ...prevState, [name]: value }));
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
   };
 
-  // Handle image upload
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setSelectedImage(file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setPreviewImage(reader.result as string); // Set the image preview
-      };
-      reader.readAsDataURL(file); // Convert the image file to base64
-    }
+  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
   };
 
-  // Simulate saving the changes
-  const handleSaveChanges = () => {
-    console.log("Saved user info:", userInfo);
-    if (selectedImage) {
-      console.log("Uploaded image:", selectedImage);
+  const handlePasswordChangeSubmit = () => {
+    if (currentPassword) {
+      console.log("Password changed to:", newPassword);
+      // Reset password fields after submission
+      setCurrentPassword("");
+      setNewPassword("");
+      setShowPasswordChange(false);
+    } else {
+      alert("Please enter the current password.");
     }
   };
 
   return (
-    <div className="max-w-xl mx-auto bg-white border-solid p-6 shadow-lg rounded-lg mt-20">
-      <h2 className="text-2xl font-bold mb-4">Edit Your Information</h2>
+    <div className="h-screen w-full flex bg-gray-100 mt-14 text-black poppins">
+      {/* Container that takes full height and width */}
 
-      {/* Profile Picture Upload */}
-      <div className="mb-6">
-        <label className="block text-gray-700">Profile Picture:</label>
-        <div className="flex items-center space-x-4 mt-2">
-          {previewImage ? (
-            <img
-              src={previewImage}
-              alt="Profile Preview"
-              className="w-20 h-20 rounded-full object-cover"
-            />
-          ) : (
-            <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
-              <span className="text-gray-500">No Image</span>
-            </div>
-          )}
-          <Button
-            icon={<UploadOutlined />}
-            className="ml-4"
-            onClick={() => document.getElementById("profilePicUpload")?.click()}
-          >
-            Upload Image
-          </Button>
+      {/* Left Column */}
+      <div className="w-1/2 bg-white  rounded-lg p-8">
+        <h1 className="text-2xl font-semibold mb-6">User Information</h1>
+        <div className="mb-6">
+          <label className="block text-lg font-medium mb-2">Name</label>
           <input
-            id="profilePicUpload"
-            type="file"
-            className="hidden"
-            accept="image/*"
-            onChange={handleImageUpload}
+            type="text"
+            value={name}
+            onChange={handleNameChange}
+            className="w-full p-3 border rounded-md text-lg"
           />
+          <button className="mt-2 text-white bg-blue-500 px-4 py-2 rounded-md">
+            Update Name
+          </button>
+        </div>
+        <div className="mb-6">
+          <label className="block text-lg font-medium mb-2">Username</label>
+          <input
+            type="text"
+            value={username}
+            onChange={handleUsernameChange}
+            className="w-full p-3 border rounded-md text-lg"
+          />
+          <button className="mt-2 text-white bg-blue-500 px-4 py-2 rounded-md">
+            Update Username
+          </button>
         </div>
       </div>
 
-      {/* Name Input */}
-      <div className="mb-4">
-        <label className="block text-gray-700">Name:</label>
-        <Input
-          type="text"
-          name="name"
-          value={userInfo.name}
-          onChange={handleInputChange}
-          placeholder="Enter your name"
-        />
-      </div>
+      {/* Right Column */}
+      <div className="w-1/2 bg-white rounded-lg p-8 flex flex-col justify-between h-full">
+        <div>
+          <h1 className="text-2xl font-semibold mb-6">Password Settings</h1>
+          <div className="mb-6">
+            <button
+              className="text-white bg-blue-500 px-4 py-2 rounded-md"
+              onClick={() => setShowPasswordChange(!showPasswordChange)}
+            >
+              Change Password
+            </button>
+          </div>
 
-      {/* Email Input */}
-      <div className="mb-4">
-        <label className="block text-gray-700">Email:</label>
-        <Input
-          type="email"
-          name="email"
-          value={userInfo.email}
-          onChange={handleInputChange}
-          placeholder="Enter your email"
-        />
-      </div>
+          {showPasswordChange && (
+            <div>
+              <label className="block text-lg font-medium mb-2">
+                Current Password
+              </label>
+              <input
+                type="password"
+                value={currentPassword}
+                onChange={(e) => setCurrentPassword(e.target.value)}
+                className="w-full p-3 border rounded-md text-lg mb-4"
+                placeholder="Enter current password"
+              />
 
-      {/* Bio Input */}
-      <div className="mb-4">
-        <label className="block text-gray-700">Bio:</label>
-        <textarea
-          name="bio"
-          value={userInfo.bio}
-          onChange={handleInputChange}
-          className="w-full border border-gray-300 rounded-md p-2"
-          placeholder="Write a short bio"
-        />
-      </div>
+              <label className="block text-lg font-medium mb-2">
+                New Password
+              </label>
+              <input
+                type="password"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                className="w-full p-3 border rounded-md text-lg"
+                placeholder="Enter new password"
+              />
 
-      {/* Save Button */}
-      <Button type="primary" className="w-full" onClick={handleSaveChanges}>
-        Save Changes
-      </Button>
+              <button
+                onClick={handlePasswordChangeSubmit}
+                className="mt-4 text-white bg-green-500 px-4 py-2 rounded-md"
+              >
+                Submit Password Change
+              </button>
+            </div>
+          )}
+          <div className="flex justify-end mt-25">
+            <button
+              className="text-white bg-red-500 px-4 py-2 rounded-md"
+              onClick={() => (window.location.href = "/")}
+            >
+              Back Home
+            </button>
+          </div>
+        </div>
+
+        {/* Back to homepage button placed at the bottom */}
+      </div>
     </div>
   );
 };

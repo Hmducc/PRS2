@@ -27,6 +27,7 @@ export default {
         150: "9.375rem",
         410: "25.625rem",
         136: "8.5rem",
+        850: "53.125rem",
       },
       colors: {
         "gray-20": "#F8F4EB",

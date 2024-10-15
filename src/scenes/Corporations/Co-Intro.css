@@ -67,9 +67,16 @@
   border-color: black;
 }
 .co-intro-background {
-  background-image: url(../../assets/signupbackground3.jpg);
+  background-image: url(../../assets/co-intro6.jpg);
   background-size: cover;
 }
 .co-intro-button {
   border: 1px solid;
+}
+.co-intro-blur {
+  background-color: #181a1b66;
+  backdrop-filter: blur(4px);
+}
+.bullet2 {
+  width: 650px;
 }
