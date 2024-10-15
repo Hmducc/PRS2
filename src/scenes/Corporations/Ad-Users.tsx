@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AdCandidates: React.FC = () => {
+const AdUsers: React.FC = () => {
   // Sample recruitment requirements data
   const [recruitmentData, setRecruitmentData] = useState([
     { id: 1, name: "Frontend Developer" },
@@ -46,4 +46,4 @@ const AdCandidates: React.FC = () => {
   );
 };
 
-export default AdCandidates;
+export default AdUsers;

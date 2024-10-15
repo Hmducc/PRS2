@@ -12,34 +12,17 @@ import {
 } from "antd";
 import "./Co-Home.css";
 import EditInformationScreen from "./Co-Edit";
-import CoCandidates from "./Co-Candidates";
-import CoRecruitmentNews from "./Co-News";
-import CoRecruitmentRequirements from "./Co-Requirement";
+
 import AdRequirement from "./Ad-Requirement"; // Import the updated requirement component
 import { useNavigate } from "react-router-dom"; // For navigation
 import AdNews from "./Ad-News";
-import AdCandidates from "./Ad-Candidates";
+import AdUsers from "./Ad-Users";
 
 const { Content, Sider } = Layout;
 
 type MenuItem = Required<MenuProps>["items"][number];
 
 // Define interfaces for both recruitment news and recruitment requirements
-interface RecruitmentData {
-  recruitmentInfo: string;
-  candidates: string;
-  time: string;
-  position: string;
-  status: string; // Added status for recruitment news
-}
-
-interface RecruitmentRequirement {
-  requirementInfo: string;
-  numberOfNews: number;
-  needs: string;
-  dayCreated: string;
-  status: string; // Ensure status is part of this
-}
 
 // Define the menu items
 const items: MenuItem[] = [
@@ -49,7 +32,7 @@ const items: MenuItem[] = [
     icon: <AddCircleRegular />,
   },
   { label: "Recruitment News", key: "Recruitment News", icon: <NewsRegular /> },
-  { label: "Candidates", key: "Candidates", icon: <UserOutlined /> },
+  { label: "Users", key: "Users", icon: <UserOutlined /> },
   { label: "Edit", key: "Edit", icon: <SettingOutlined /> },
 ];
 
@@ -60,12 +43,6 @@ const Admin: React.FC = () => {
   const navigate = useNavigate(); // For navigating to HomePage
 
   // State for recruitment news
-  const [recruitmentList, setRecruitmentList] = useState<RecruitmentData[]>([]);
-
-  // State for recruitment requirements
-  const [requirementList, setRequirementList] = useState<
-    RecruitmentRequirement[]
-  >([]);
 
   const onMenuSelect = ({ key }: { key: string }) => {
     setSelectedKey(key);
@@ -95,8 +72,8 @@ const Admin: React.FC = () => {
         return <AdRequirement></AdRequirement>;
       case "Recruitment News":
         return <AdNews></AdNews>;
-      case "Candidates":
-        return <AdCandidates></AdCandidates>;
+      case "Users":
+        return <AdUsers></AdUsers>;
       case "Edit":
         return <EditInformationScreen />;
       default:
