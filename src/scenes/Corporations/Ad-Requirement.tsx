@@ -16,32 +16,23 @@ const AdRequirement: React.FC = () => {
   };
 
   return (
-    <div className="p-5">
-      <table className="min-w-full border-collapse border border-gray-300 ">
-        <thead>
-          <tr>
-            <th className="border border-gray-300 p-2 text-center">
-              Recruitment Requirement
-            </th>
-            <th className="border border-gray-300 p-2">Activity</th>
-          </tr>
-        </thead>
-        <tbody>
-          {recruitmentData.map((item) => (
-            <tr key={item.id}>
-              <td className="border border-gray-300 p-2">{item.name}</td>
-              <td className="border border-gray-300 p-2 flex justify-center align-middle">
-                <button
-                  className="bg-red-500 text-white px-4 py-1 rounded"
-                  onClick={() => handleDelete(item.id)}
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="p-5 bg-blue-100">
+      {recruitmentData.map((item) => (
+        <div
+          key={item.id}
+          className="bg-white shadow-md rounded-lg p-4 mb-4 flex justify-between items-center"
+        >
+          <div>
+            <h3 className="text-lg font-semibold">{item.name}</h3>
+          </div>
+          <button
+            className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 transition duration-200"
+            onClick={() => handleDelete(item.id)}
+          >
+            Delete
+          </button>
+        </div>
+      ))}
     </div>
   );
 };
